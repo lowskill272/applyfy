@@ -1,0 +1,10 @@
+{
+  "name": "applyfy",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint 'apps/**/*.ts' 'packages/**/*.ts'",
+    "format": "prettier --write 'apps/**/*.ts' 'packages/**/*.ts'"
+  },
+  "packageManager": "pnpm@10.33.1"
+}

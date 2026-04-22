@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: applyfy_postgres
+    environment:
+      POSTGRES_USER: applyfy
+      POSTGRES_PASSWORD: applyfy
+      POSTGRES_DB: applyfy
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:24
+    container_name: applyfy_clickhouse
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+
+volumes:
+  postgres_data:
+  clickhouse_data:
