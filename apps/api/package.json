@@ -12,11 +12,13 @@
   },
   "dependencies": {
     "@applyfy/shared": "workspace:*",
+    "bcrypt": "^6.0.0",
     "drizzle-orm": "^0.45.2",
     "express": "^5.1.0",
     "pg": "^8.20.0"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
     "@types/express": "^5.0.3",
     "@types/node": "^22.0.0",
     "@types/pg": "^8.20.0",
