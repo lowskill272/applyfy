@@ -1,4 +1,4 @@
-export interface RegisterCommand {
+export type RegisterCommand = {
   email: string
   password: string
 }

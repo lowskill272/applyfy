@@ -8,7 +8,7 @@ import { RegisterCommand } from './RegisterCommand.js'
 export class RegisterHandler {
   constructor(private readonly userRepository: UserRepository) {}
 
-  async execute(registerCommand: RegisterCommand) {
+  async execute(registerCommand: RegisterCommand): Promise<string> {
     if (await this.userRepository.findByEmail(registerCommand.email)) {
       throw new UniqueConstraintError()
     }
